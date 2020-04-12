@@ -1,0 +1,18 @@
+---
+- hosts: all
+  become: yes
+  roles:
+  - oefenweb.ssh_keys
+  vars:
+    ssh_keys_public_keys:
+      - owner: davidfic
+        src: keys/davidfic_jupiter.pub 
+        dest: davidfic_jupiter.pub
+        group: davidfic
+    ssh_keys_authorized_keys:
+      - owner: davidfic
+        src: keys/davidfic_jupiter.pub
+
+
+
+
