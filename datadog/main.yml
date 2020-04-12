@@ -1,0 +1,8 @@
+---
+- hosts: all
+  become: yes
+  roles:
+    - datadog.datadog
+  vars_files: dd.yml
+  vars:
+    datadog_api_key: "{{ api_key }}"
